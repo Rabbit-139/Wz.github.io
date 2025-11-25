@@ -1,0 +1,165 @@
+<!-- ...existing code... -->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>号卡商城</title>
+  <style>
+    :root{
+      --max-w:1100px;
+      --card-bg: linear-gradient(180deg,#fff,#f7f7f9);
+      --accent:#1a73e8;
+      --muted:#666;
+      --radius:10px;
+      --glass: rgba(255,255,255,0.9);
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color:#222;
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("background.jpg") center/cover no-repeat fixed;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      padding:40px 16px;
+    }
+
+    .wrapper{
+      width:100%;
+      max-width:var(--max-w);
+    }
+
+    .site-header{
+      background: var(--glass);
+      padding:18px 20px;
+      border-radius: var(--radius);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 8px 24px rgba(0,0,0,0.18);
+      margin-bottom:20px;
+    }
+    .site-header h1{margin:0;font-size:1.4rem;}
+    .site-header .subtitle{color:var(--muted);font-size:0.95rem}
+
+    /* 顶部两列区域：左侧简介/链接，右侧特色列表 */
+    .grid-top{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .card{
+      background: var(--card-bg);
+      border-radius:10px;
+      padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    .card h2{margin:0 0 10px 0;font-size:1.05rem;color:#222}
+    .card p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    ul{list-style:none;padding:0;margin:0}
+    li{margin:8px 0}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* 多卡片网格（分区展示：广电/联通/电信/移动） */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:8px;
+    }
+
+    .card .net-title{font-weight:600;margin-bottom:8px;color:#0f1723}
+
+    /* 响应式：窄屏堆叠 */
+    @media (max-width:900px){
+      .grid-top{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header" role="banner">
+      <div>
+        <h1>号卡商城</h1>
+        <div class="subtitle">精选卡片 — 快速直达下单页面</div>
+      </div>
+      <nav aria-label="外部链接">
+        <a href="https://h5.lot-ml.com/ProductEn/Index/dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">廾匸号卡商城</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid-top" aria-labelledby="featured-title">
+        <div class="card" id="featured">
+          <h2 id="featured-title">热门卡片</h2>
+          <p>常用/推荐卡片，点击打开下单页面（新窗口）。</p>
+          <ul>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=e21545d2cec4a43d&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电飞鑫卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudiD=22a6fce4b49cf7c9&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电飞启卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudiD=9ad58e0510e8edb3&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">联通飞莎卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=02f3dd3bdda0177d&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">电信飞窗卡</a></li>
+          </ul>
+        </div>
+
+        <div class="card" id="more">
+          <h2>更多分类</h2>
+          <p>按运营商分类，快速查找所需卡种。</p>
+          <ul>
+            <li><a href="#guangdian">广电系列</a></li>
+            <li><a href="#liantong">联通系列</a></li>
+            <li><a href="#dianxin">电信系列</a></li>
+            <li><a href="#yidong">移动系列</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cards" aria-label="卡片分类">
+        <article class="card" id="guangdian">
+          <div class="net-title">广电</div>
+          <ul>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudiD=93de07a30cc4cf81&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电飞鹿卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=d070f6ef2f04c45e&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电飞千卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=583b57bd779714dd&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电飞百卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=0cedd06d4b7aad8c&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">广电梦燕卡</a></li>
+          </ul>
+        </article>
+
+        <article class="card" id="liantong">
+          <div class="net-title">联通</div>
+          <ul>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudiD=9ad58e0510e8edb3&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">联通飞莎卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=b8fc6ffadfe74f21&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">联通仓集卡</a></li>
+          </ul>
+        </article>
+
+        <article class="card" id="dianxin">
+          <div class="net-title">电信</div>
+          <ul>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=02f3dd3bdda0177d&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">电信飞窗卡</a></li>
+          </ul>
+        </article>
+
+        <article class="card" id="yidong">
+          <div class="net-title">移动</div>
+          <ul>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudID=1b008b02abeff6d0&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">移动飞檬卡</a></li>
+            <li><a href="https://h5.lot-ml.com/h5orderEn/index?pudiD=d97fc2ebbc229124&userid=dd05a00bbc8aea57" target="_blank" rel="noopener noreferrer">移动飞探卡</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+<!-- ...existing code... -->
